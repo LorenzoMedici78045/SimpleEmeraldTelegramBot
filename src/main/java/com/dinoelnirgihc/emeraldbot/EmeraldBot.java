@@ -29,7 +29,6 @@ import static com.dinoelnirgihc.emeraldbot.model.UrlPhoto.*;
 public class EmeraldBot extends TelegramLongPollingBot
 {
     final EmeraldBotConfiguration config;
-    private final MessageSourceAutoConfiguration messageSourceAutoConfiguration;
 
     @Autowired
     public EmeraldBot(EmeraldBotConfiguration config, MessageSourceAutoConfiguration messageSourceAutoConfiguration)
@@ -44,7 +43,6 @@ public class EmeraldBot extends TelegramLongPollingBot
         {
             log.error("Error occurred: " + e.getMessage());
         }
-        this.messageSourceAutoConfiguration = messageSourceAutoConfiguration;
     }
 
     @Override
